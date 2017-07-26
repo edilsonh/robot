@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="public/styles.css">
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td>
+          <img src="{{avatar}}" id="card-image">
+        </td>
+        <td>
+          <p class="card-bold" id="card-name">{{name}}</p>
+          <p>{{#address.city}}{{address.city}}{{/address.city}}, {{address.country}} | {{#job}}{{job}} {{company}}{{/job}}{{^job}}<span>Looking for hire</span>{{/job}}</p>
+          <p>{{email}} | {{phone}}</p>
+        </td>
+      </tr>
+      {{#university}}
+      <tr>
+        <td>
+          <p class="card-bold label">Education</p>
+        </td>
+        <td>
+          <p>{{university}}</p>
+        </td>
+      </tr>
+      {{/university}}
+      <tr>
+        <td>
+          <p class="card-bold label">Skills</p>
+        </td>
+        <td>
+          {{#skills}}
+          <p>{{.}}</p>
+          {{/skills}}
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

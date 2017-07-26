@@ -1,0 +1,46 @@
+.robots-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.robots {
+  width: 180px;
+  margin: 15px 15px;
+  padding: 0 15px;
+  border: 1px solid grey;
+}
+
+.not-working {
+  color: red;
+}
+
+a {
+  text-decoration: none;
+}
+
+#card-image {
+  border-radius: 100px;
+  border: 1px solid grey;
+}
+
+.card-bold {
+  font-weight: bolder;
+}
+
+#card-name {
+  font-size: 30px;
+}
+
+span {
+  color: red;
+}
+
+.label {
+  text-align: right;
+}
+
+td {
+  padding: 0 5px;
+  vertical-align: top;
+}
