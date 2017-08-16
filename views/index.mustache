@@ -6,19 +6,23 @@
     <link rel="stylesheet" href="public/styles.css">
   </head>
   <body>
+    <nav>
+      <a href="http://localhost:3000/employed">Employed</a>
+      <a href="http://localhost:3000/notEmployed">Not Employed</a>
+    </nav>
     <section class="robots-section">
-      {{#users}}
+      {{ #users }}
         <section class="robots">
           <img src="{{avatar}}">
           <a href="http://localhost:3000/{{username}}"><h2>{{name}}</h2></a>
-          {{#job}}
+          {{ #job }}
             <p>{{job}}, {{company}}</p>
-          {{/job}}
-          {{^job}}
+          {{ /job }}
+          {{ ^job }}
             <p class="not-working">Available for hire</p>
-          {{/job}}
+          {{ /job }}
         </section>
-      {{/users}}
+      {{ /users }}
     </section>
 
   </body>

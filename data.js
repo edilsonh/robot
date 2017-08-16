@@ -1,5 +1,5 @@
 module.exports = {
-  users: [
+robots: [
     {
       id: 1,
       username: "hjuza0",
