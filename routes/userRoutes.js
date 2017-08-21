@@ -3,8 +3,9 @@ const router = express.Router();
 const Robot = require("../models/data");
 
 router.get("/:id", (req, res) => {
-  //let foundUser = Robot.getUserByUsername(req.params.id);
-  //res.render("robot", {user: foundUser})
+  Robot.getByUsername((req.params.id), (data) => {
+    res.render("robot", {user:data})
+  });
 })
 
 module.exports = router;

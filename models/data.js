@@ -21,16 +21,16 @@ function findAllUnemployed(callback) {
   });
 }
 
-function findById(id, callback) {
+function getByUsername(username, callback) {
   let profiles = client.db.collection("robots");
-  profiles.findOne({"id": id}, (err, data) => {
+  profiles.findOne({"username": username}, (err, data) => {
     callback(data);
   });
 }
 
 module.exports = {
   findAll: findAll,
-  //getUserByUsername: getUserByUsername, may have to change this for username
+  getByUsername: getByUsername,
   findAllEmployed: findAllEmployed,
   findAllUnemployed: findAllUnemployed
 }
